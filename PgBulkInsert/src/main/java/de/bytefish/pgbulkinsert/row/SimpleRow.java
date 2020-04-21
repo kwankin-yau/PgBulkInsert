@@ -137,6 +137,10 @@ public class SimpleRow {
         setValue(columnName, DataType.DoublePrecision, value);
     }
 
+    public void setDouble(int ordinal, double value) {
+        setValue(ordinal, DataType.DoublePrecision, value);
+    }
+
     public void setDate(String columnName, LocalDate value) {
         setValue(columnName, DataType.Date, value);
     }

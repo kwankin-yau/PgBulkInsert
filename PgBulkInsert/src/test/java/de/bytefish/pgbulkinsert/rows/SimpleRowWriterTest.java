@@ -1,5 +1,6 @@
 package de.bytefish.pgbulkinsert.rows;
 
+import de.bytefish.pgbulkinsert.row.RowWriter;
 import de.bytefish.pgbulkinsert.row.SimpleRowWriter;
 import de.bytefish.pgbulkinsert.util.PostgreSqlUtils;
 import de.bytefish.pgbulkinsert.utils.TransactionalTestBase;
@@ -33,7 +34,7 @@ public class SimpleRowWriterTest extends TransactionalTestBase {
         };
 
         // Create the Table Definition:
-        SimpleRowWriter.Table table = new SimpleRowWriter.Table(schema, tableName, columnNames);
+        RowWriter.Table table = new RowWriter.Table(schema, tableName, columnNames);
 
         // Create the Writer:
         SimpleRowWriter writer = new SimpleRowWriter(table);
